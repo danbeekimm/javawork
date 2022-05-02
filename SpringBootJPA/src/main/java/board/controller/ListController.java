@@ -36,4 +36,5 @@ public class ListController {
 		//목록으로 이동
 		return "redirect:/";//해당 매핑주소로 url이 바뀜
 	}
+	//.............
 }

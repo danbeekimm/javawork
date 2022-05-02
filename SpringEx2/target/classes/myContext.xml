@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+<!--위에컨텍스ㅡ 추가-->
+<!-- xml통해서 하는방법 -->
+<bean id="person" class="study3.Person">
+	<constructor-arg>
+		<list> <!--리스트일땐 이렇게 리스트 추가해서 여러값넘기면돼 -->
+			<value>낚시</value>
+			<value>게임</value>
+			<value>여행</value>
+			<value>음악감상</value>
+		</list>
+	</constructor-arg>
+	<property name="address">
+		<value>서울시강남구</value>
+	</property>
+</bean>
+
+
+<bean id="person2" class="study3.Person">
+	<constructor-arg>
+		<list> <!--리스트일땐 이렇게 리스트 추가해서 여러값넘기면돼 -->
+			<value>하와이여행</value>
+			<value>집에서딩굴</value>
+			<value>한강피크닉</value>
+			<value>잠으로의 여행</value>
+		</list>
+	</constructor-arg>
+	<property name="address">
+		<value>제주시애월읍</value>
+	</property>
+</bean>
+<!--<bean class="study3.ApplicationConfig"/>-->
+ <!-- 이거해도인식못해, @Configuration이걸인식못해 >>이럴땐 네임스페이스에서
+ 컨텍슥트추가-->
+ <context:annotation-config/>
+ <!-- context:component-scan:wild card(*)가능,여러패키지일경우,로추가
+ study.day1,study.day2 or study* 이렇게 -->
+ <context:component-scan base-package="study3"/><!-- 이걸해줘야함. -->
+ <!-- 이게있어야 어노테이션을 인식함 -->
+</beans>
+
+
+
+

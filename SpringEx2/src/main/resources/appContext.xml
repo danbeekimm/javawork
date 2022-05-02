@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+<!-- 환경설정하는곳, 빈즈만 선택했지만 namespaces에 가서 더 선택가능 -->
+<!-- 싱글톤:기본스콥, 같은주소다.생략하면 싱글톤이란거임. -->
+	<bean id="hello" class="study1.Hello" scope="singleton"/>
+	
+	
+	<bean id="score" class="study2.Score"> 
+		<constructor-arg value="100"/><!--국어점수 생성자주입 -->
+		<property name="eng" value="89"/><!--setter 주입 -->
+		<property name="mat">
+			<value>80</value>
+		</property>
+		</bean>
+		<!--일반 이름 나이는 프로퍼티로 세터주입함 /스코어라는아이디 주입 -->
+		<bean id="stu" class="study2.Student">
+			<constructor-arg ref="score"/>
+			<property name="name" value="이영자"/> 
+			<property name="age" value="30"/>
+		</bean>
+</beans>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<link
+	href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Jua&family=Lobster&family=Nanum+Pen+Script&display=swap"
+	rel="stylesheet">
+
+</head>
+<body>
+	<h2 class="alert alert-success" style="width: 400px;">폼테그연습</h2>
+	<form action="Ex3Action.jsp" method="get"> <!-- get: url에 &로 보이는거 post:안보임-->
+		<table class="table talble-bordered" style="width: 400px;">
+			<tr>
+				<th bgcolor="pink">이름</th>
+				<td>
+					<input type="text" name="name" style="width: 150px;"
+					class="form-control" autofocus="autofocus" required="required"> <!--
+						autofocus:커서가있는거, required:말풍선나오는거
+					 자동완성이라 autofocus만줘도됨 그뒤엔 자동완성,얘는 한곳만줘야함 -->
+				</td>
+			</tr>
+			
+			<tr>
+				<th bgcolor="pink">이메일</th>
+				<td>
+					<input type="email" name="email" style="width: 150px;"
+					class="form-control" required="required">
+				</td>
+			</tr>
+			
+				<tr>
+				<th bgcolor="pink">운전면허</th>
+				<td>
+					<input type="checkbox" name="driver" >운전면허
+				</td>
+			</tr>
+			
+			<tr>
+				<td colspan="2" align="center">
+					<button type="submit" class="btn btn-info" style="width: 200px;">서버로전송</button>
+					<!-- 서브밑으로하면 ex3jsp로 감 -->
+				</td>
+			</tr>
+
+		</table>
+
+	</form>
+</body>
+</html>

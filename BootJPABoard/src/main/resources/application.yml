@@ -1,0 +1,26 @@
+server:
+  port: 9001
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/board/
+      #까진 들어가게
+      suffix: .jsp
+  devtools:
+    livereload:
+      enabled: true
+
+      #mysql
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/bitcamp?serverTimezone=Asia/Seoul
+    username: angel
+    password: 1234
+#jpa
+  jpa:
+    hibernate:
+      ddl-auto: update
+      genarate-ddl: true
+      show-sql: true
+      database: mysql
+      database-platform: org.hibernate.dialect.MySQL5InnoDBDialect

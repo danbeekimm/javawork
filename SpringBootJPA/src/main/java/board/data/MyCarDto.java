@@ -24,15 +24,17 @@ public class MyCarDto {
    @Column(name = "carname")
    private String carname;
    
-   @Column(name = "carprice")
+   @Column(name = "carprice", updatable = false) //수정안되게지정하기
    private int carprice;
    
    @Column(name = "carcolor")
    private String carcolor;
    
    @Column(name = "carguip")
-   private String capguip;
+   private String carguip;
    
    @CreationTimestamp //엔터티가 생성되는 시점의 시간이 자동등록
+   @Column(updatable = false)// 수정안되는 컬럼
    private Timestamp writeday;
+   
 }

@@ -9,6 +9,8 @@ import org.springframework.data.repository.CrudRepository;
 //}
 
 //이거더많이씀
-public interface MyCarDaoInter extends JpaRepository<MyCarDto, Long>{
+//sql문으로 실행되도록
+	//기능구현 미리한 메소드임JpaRepository
 
+public interface MyCarDaoInter extends JpaRepository<MyCarDto, Long>{ 
 }

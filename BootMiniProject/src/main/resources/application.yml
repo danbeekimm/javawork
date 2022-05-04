@@ -1,0 +1,18 @@
+server:
+  port: 9001
+spring:
+#  mvc:
+#   view:
+#      prefix: /WEB-INF/
+      #까진 들어가게
+#      suffix: .jsp
+  devtools:
+    livereload:
+      enabled: true
+
+      #mysql
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/bitcamp?serverTimezone=Asia/Seoul
+    username: angel
+    password: 1234

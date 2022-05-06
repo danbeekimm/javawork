@@ -19,6 +19,11 @@ body {
 </head>
 
 <body>
-<h1>info</h1>
+<span class="glyphicon glyphicon-user"></span>&nbsp;이름
+<br>
+<span class="glyphicon glyphicon-home"></span>&nbsp;주소
+<br>
+<span class="glyphicon glyphicon-earphone"></span>&nbsp;전화
+<br>
 </body>
 </html>

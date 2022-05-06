@@ -16,8 +16,118 @@ body {
  font-family: 'Jua';
  }
 </style>
+<script type="text/javascript">
+   $(function() {
+      //비번체크
+      $("#pass2").keyup(function() {
+         var p1 = $("#pass1").val();
+         var p2 = $(this).val();
+         if (p1 == p2) {
+            $("b.passok").html("ok").css("color", "blue");
+         } else {
+            $("b.passok").html("fail").css("color", "red");
+         }
+      });
+
+      //이메일
+      $("#email3").change(function() {
+         var s = $(this).val();
+         if (s == '-') {
+            $("#email2").val("");
+            $("#email2").focus();
+         } else {
+            $("#email2").val(s);
+         }
+
+      });
+   });
+   
+   function check(){
+      var a = $("b.passok").text();
+      if(a!='ok'){
+         alert("비밀번호를 제대로 입력해 주세요");
+         $("#pass1").val("");
+         $("#pass2").val("");
+         $("#pass1").focus("");
+         return false; //action 호출되지 않음
+      } else {
+         return true;
+      }
+   }
+</script>
 </head>
 <body>
 <h1>회원가입</h1>
+<form action="insert" method="post" class="form-inline"
+onsubmit="return check()">
+	<table class="table table-bordered" style="width: 550px;">
+	<tr>
+		<th style="width: 130px;">이 름</th>
+		<td>
+			<input type="text" name="name" style="width: 130px;" class="form-control"
+			required="required">
+		</td>
+		</tr>
+		
+	<tr>
+		<th style="width: 130px;">아이디</th>
+		<td>
+			<input type="text" name="id" style="width: 130px;" class="form-control"
+			required="required">
+			<button type="button" class="btn btn-sm btn-danger" id="idcheck">아이디체크</button>
+			&nbsp;
+			<b class="idok"></b>		
+		</td>
+		</tr>
+		
+	<tr>
+		<th style="width: 130px;">비밀번호</th>
+		<td>
+			<input type="password" name="pass" id="pass1" style="width: 100px;" class="form-control"
+			required="required" placeholder="비밀번호">
+			<b>확인</b>
+			<input type="password" id="pass2" style="width: 100px;" class="form-control" required="required" placeholder="한번더 입력">
+			&nbsp;
+			<b class="passok"></b>
+		</td>
+		</tr>
+		<tr>
+		<th style="width: 130px;">핸드폰</th>
+		<td>
+			<input type="text" name="hp" style="width: 180px;" class="form-control"
+			required="required">
+		</td>
+		</tr>
+		<tr>
+		<th style="width: 130px;">이메일</th>
+		<td>
+			<input type="text" name="email1" style="width: 100px;" class="form-control"
+			required="required">
+			<b>@</b>
+			<input type="text" name="email2" id="email2" style="width: 130px;" class="form-control"
+			required="required">
+			<select id="email3" class="form-control">
+				<option value="-">직접입력</option>
+				<option value="naver.com">네이버</option>
+				<option value="nate.com">네이트</option>
+				<option value="google.com">구글</option>
+			
+			</select>
+		</td>
+		</tr>
+		
+		
+		<tr>
+		<th style="width: 130px;">주 소</th>
+		<td>
+			<input type="text" name="addr"  class="form-control"
+			required="required" style="width: 400px;">
+		</td>
+		</tr>
+		<tr>
+			<td colspan="2" align="center">
+			<button type="submit" class="btn btn-info" style="width: 150px;">회원가입</button>
+	</table>
+</form>
 </body>
 </html>

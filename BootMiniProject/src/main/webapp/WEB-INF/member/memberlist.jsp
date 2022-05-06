@@ -14,25 +14,11 @@
 body {
  font-size: 2rem;
  font-family: 'Jua';
- background-image: url("../image/images.png");
- background-repeat: no-repeat;
- background-size: cover;
  }
- img.mainimage{
- 	width: 70px;
- 	height: 70px;
- 	border: 3px dotted black; 
- 	margin-right: 10px;
- 	margin-bottom: 10px;
- 	}
-
 </style>
 </head>
 <body>
-<h2  class="a" style="font-family: 'Jua'">[비트상점에 오신걸 환영합니다]</h2>
-<c:forEach var="a" begin="1" end="20">
-		<img src="image/${a}.jpg" class="mainimage">
-		<c:if test="${a%5==0}"><br></c:if>
-</c:forEach>
+<button type="button" class="btn btn-info" style="width: 150px;" onclick="location.href='form'">회원가입</button>
+<h2>총${totalCount}명의 회원이 있습니다</h2>
 </body>
 </html>

@@ -2,6 +2,8 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles"%>
+ <!-- 타일추가 -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,28 +13,31 @@
 <script src="https://code.jquery.com/jquery-3.5.0.js"></script>   
 <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Jua&family=Lobster&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
 <style>
-body {
- font-size: 2rem;
- font-family: 'Jua';
- background-image: url("../image/images.png");
- background-repeat: no-repeat;
- background-size: cover;
- }
- img.mainimage{
- 	width: 70px;
- 	height: 70px;
- 	border: 3px dotted black; 
- 	margin-right: 10px;
- 	margin-bottom: 10px;
- 	}
+div.main{
+	width: 100%;
+	}
+body{
 
+background-size: 100%;
+background-repeat: no-repeat;
+background-position: center;
+}
 </style>
 </head>
-<body>
-<h2  class="a" style="font-family: 'Jua'">[비트상점에 오신걸 환영합니다]</h2>
-<c:forEach var="a" begin="1" end="20">
-		<img src="image/${a}.jpg" class="mainimage">
-		<c:if test="${a%5==0}"><br></c:if>
-</c:forEach>
+<body style="background-image: url('../image/23.jpg');"><!-- 타일스의이름과일치해야함 -->
+	<div class="layout"> 
+	
+		<div class="title">
+			<h1>오시는길...</h1>
+		</div> 
+		
+		<div class="menu">
+			<tiles:insertAttribute name="menu"/>
+		</div>
+		<div class="main">
+			<tiles:insertAttribute name="main"/>
+		</div>
+		
+	</div>
 </body>
 </html>

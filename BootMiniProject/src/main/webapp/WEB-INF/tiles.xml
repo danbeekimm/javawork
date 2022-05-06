@@ -13,5 +13,14 @@
 	<definition name="/*/*" extends="layout1">
 		<put-attribute name="main" value="/WEB-INF/{1}/{2}.jsp"/><!-- {2}가 메인으로 가게해라 -->
 	<!--  여러개면 그여러개를 layout1에 넣기 name 구조는 똑같으면안돼 여러개일땐 -->
+	<!-- main만 변경하고싶다. -->
+	</definition>
+	<definition name="layout2" template="/WEB-INF/layout/layout2.jsp">
+	<put-attribute name="menu" value="/WEB-INF/layout/menu.jsp"/>
+	<put-attribute name="main" value="/WEB-INF/layout/map.jsp"/>
+	</definition>
+	
+	<definition name="/sub/*/*" extends="layout2">
+	<put-attribute name="main" value="/WEB-INF/{1}/{2}.jsp"/>
 	</definition>
 </tiles-definitions>

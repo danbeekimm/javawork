@@ -18,15 +18,56 @@ body {
  font-family: 'Jua';
  }
  div.layout div{
- 		border: 1px solid black;
+ 		border: 0px solid black;
  		}
+ a:link {
+	text-decoration: none;
+	color: black;
+}
+ a:hover {
+	text-decoration: none;
+	
+}
+div.layout div.title a{
+	
+	color: black;
+	
+	}
+div.layout div.title{
+	position:absolute;
+	top: 10px;
+	left: 300px;
+	
+	}
+	
+div.layout div.menu{
+position:absolute;
+	top: 100px;
+	left: 300px;
+
+	}
+div.layout div.info{
+	position: absolute;
+	left: 30px;
+	top:250px;
+	width: 200px;
+	height: 200px;
+	}
+div.layout div.main{
+	position: absolute;
+	left: 300px;
+	top:250px;
+	width: 1000px;
+	height: 600px;
+	}
 </style>
 </head>
 <body><!-- 타일스의이름과일치해야함 -->
 	<div class="layout"> 
+	
 		<div class="title">
 			<tiles:insertAttribute name="title"/>
-		</div>
+		</div> 
 		
 		<div class="menu">
 			<tiles:insertAttribute name="menu"/>

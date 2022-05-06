@@ -12,12 +12,19 @@
 <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Jua&family=Lobster&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
 <style>
 body {
- font-size: 2rem;
+ font-size: 0.5rem;
  font-family: 'Jua';
- }
+ height: 100px;
+ background-color: #F3F1E9;
+ img{
+ width: 50px;
+ height: 20px;
 </style>
 </head>
+<c:set var="root" value="<%=request.getContextPath()%>"/>
 <body>
-<h1>title</h1>
+<a href="/">
+<img src="${root}/image/title.jpg" style="height: 40px;" ><br>
+<b>SpringBoot+Tiles+MybatisProject</b></a>
 </body>
 </html>

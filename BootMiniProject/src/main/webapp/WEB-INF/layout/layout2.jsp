@@ -18,13 +18,15 @@ div.main{
 	}
 body{
 
-background-size: 100%;
+background-size:cover;
 background-repeat: no-repeat;
-background-position: center;
+ background-image: url("../image/wallpaperbetter.jpg");
+ background-repeat: no-repeat;
+ background-size: cover;
 }
 </style>
 </head>
-<body style="background-image: url('../image/23.jpg');"><!-- 타일스의이름과일치해야함 -->
+<body style="color: white;"><!-- 타일스의이름과일치해야함 -->
 	<div class="layout"> 
 	
 		<div class="title">

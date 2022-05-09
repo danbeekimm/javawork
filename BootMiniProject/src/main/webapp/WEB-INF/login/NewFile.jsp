@@ -14,26 +14,10 @@
 body {
  font-size: 2rem;
  font-family: 'Jua';
- background-image: url("../image/wallpaperbetter.jpg");
- background-repeat: no-repeat;
- background-size: cover;
-
  }
- img.mainimage{
- 	width: 120px;
- 	height: 120px;
- 	border: 3px solid black; 
- 	margin-right: 10px;
- 	margin-bottom: 10px;
- 	}
-
 </style>
 </head>
 <body>
-<h2  class="a" style='background-color: #8b4513;' "color: white; font-family: 'Lobster'" >[NIKE NEW Trending Now]</h2>
-<c:forEach var="a" begin="1" end="20">
-		<img src="image/${a}.jpg" class="mainimage">
-		<c:if test="${a%5==0}"><br></c:if>
-</c:forEach>
+
 </body>
 </html>

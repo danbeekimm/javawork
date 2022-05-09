@@ -14,16 +14,17 @@
 body {
  font-size: 2rem;
  font-family: 'Jua';
+ 
  }
 </style>
 </head>
 
-<body>
-<span class="glyphicon glyphicon-user"></span>&nbsp;이름
+<body style="color: white;">
+<span class="glyphicon glyphicon-user" style="color: white;"></span>&nbsp;nike
 <br>
-<span class="glyphicon glyphicon-home"></span>&nbsp;주소
+<span class="glyphicon glyphicon-home" style="color: white;"></span>&nbsp;adress : 강남 서초
 <br>
-<span class="glyphicon glyphicon-earphone"></span>&nbsp;전화
+<span class="glyphicon glyphicon-earphone" style="color: white;"></span>&nbsp;telephone:010-4444-3333
 <br>
 </body>
 </html>

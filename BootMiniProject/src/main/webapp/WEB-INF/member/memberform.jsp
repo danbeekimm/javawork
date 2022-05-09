@@ -14,6 +14,9 @@
 body {
  font-size: 2rem;
  font-family: 'Jua';
+  background-image: url("../image/wallpaperbetter.jpg");
+ background-repeat: no-repeat;
+ background-size: cover;
  }
 </style>
 <script type="text/javascript">
@@ -40,11 +43,34 @@ body {
          }
 
       });
+      //아이디중복
+      $("#idcheck").click(function() {
+		$.ajax({
+			type:"get",
+			dataType:"json",
+			url:"idcheck",
+			data:{"id":$("#id").val()},
+			success:function(data){
+				if(data.count==0){
+					$("b.idok").text("ok");  //membercontroller가 넘어옴
+					}else{
+					alert("이미존재하는 아이디입니다");
+					$("#id").val("");
+					$("#id").focus();
+				}
+			}
+		});
+	});
    });
    
    function check(){
       var a = $("b.passok").text();
-      if(a!='ok'){
+      if($("b.idok").text()!='ok'){
+    	  alert("아이디 중복확인 해주세요");
+    	
+    	  return false; //false해야 다음으로넘어가지않는다
+     
+       }else if(a!='ok'){
          alert("비밀번호를 제대로 입력해 주세요");
          $("#pass1").val("");
          $("#pass2").val("");
@@ -56,7 +82,7 @@ body {
    }
 </script>
 </head>
-<body>
+<body >
 <h1>회원가입</h1>
 <form action="insert" method="post" class="form-inline"
 onsubmit="return check()">
@@ -72,7 +98,7 @@ onsubmit="return check()">
 	<tr>
 		<th style="width: 130px;">아이디</th>
 		<td>
-			<input type="text" name="id" style="width: 130px;" class="form-control"
+			<input type="text" name="id" id="id" style="width: 130px;" class="form-control"
 			required="required">
 			<button type="button" class="btn btn-sm btn-danger" id="idcheck">아이디체크</button>
 			&nbsp;

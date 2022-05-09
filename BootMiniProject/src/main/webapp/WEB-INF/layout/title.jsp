@@ -12,19 +12,64 @@
 <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Jua&family=Lobster&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
 <style>
 body {
- font-size: 0.5rem;
+
+ font-size: 0.2rem;
  font-family: 'Jua';
+ 
  height: 100px;
  background-color: #F3F1E9;
+ }
  img{
- width: 50px;
- height: 20px;
+ width: 200px;
+ height: 60px;
+ }
+ .b{
+	text-align: center;
+	}
+div.login{
+	position: absolute;
+	left: 600px;
+	top: 30px;
+	width: 200px;
+	}
+div.
 </style>
+
 </head>
 <c:set var="root" value="<%=request.getContextPath()%>"/>
 <body>
-<a href="/">
-<img src="${root}/image/title.jpg" style="height: 40px;" ><br>
-<b>SpringBoot+Tiles+MybatisProject</b></a>
+   <a href="/">
+   <img src="${root}/image/ddo.png" >
+   <b style="float: right;">SpringBoot+Tiles+Mybatis Project</b>
+   </a>
+   <div class="login">
+      <c:if test="${sessionScope.loginok==null}">
+         <button type="button" class="btn btn-success" style="width: 100px;" 
+            onclick="location.href='${root}/login/form'">Login</button>
+      </c:if>               <!-- location.href=""의 좌표는 절대좌표로 고정시키기..이유는..뭐 바뀔 수 있어서..?? -->
+      
+      <c:if test="${sessionScope.loginok!=null}">   
+       
+         <b>${sessionScope.loginname}(${sessionScope.loginid}) 님</b>
+         &nbsp;&nbsp;
+         <button type="button" class="btn btn-info" style="width: 100px;" 
+            onclick="logout()">Logout</button>
+      </c:if>
+   </div>
+   <script type="text/javascript">
+   function logout() {
+	   $.ajax({
+		   type:"get",
+		   dataType:"text",
+		   url:"${root}/login/logout",
+		   success:function(){
+			   location.reload();
+		   }
+	   });
+	
+}
+   
+   </script>
 </body>
+
 </html>

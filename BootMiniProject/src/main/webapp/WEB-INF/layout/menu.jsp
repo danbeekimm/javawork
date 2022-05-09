@@ -36,13 +36,13 @@ ul.menu li {
    text-align: center;
    font-size: 22px;
    font-family: 'Jua';
-   background-color: #FFFACD;
+   background-color: #faf0e6;
    cursor: pointer;
 }
 
 ul.menu li.select1 {
-   background-color: #db7093;
-   color: #FFFACD;
+   background-color: #8b0000;
+   color: white;
 
 ul.menu li a {
    color: gray;
@@ -63,6 +63,7 @@ ul.menu li a {
 </head>
 
 <body>
+<br><br>
    <ul class="menu">
       <li><span class="glyphicon glyphicon-home"></span> <a
          href="${root}/"><b>Home</b></a></li>

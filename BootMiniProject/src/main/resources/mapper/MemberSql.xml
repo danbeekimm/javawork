@@ -9,5 +9,21 @@
    	insert into member(name,id,pass,email,hp,addr,gaipday) values (#{name},
    	#{id},#{pass},#{email},#{hp},#{addr},now())   <!-- values뒤에 띄어쓰기 -->
    </insert>
+   
+	   <select id="getSearchId" parameterType="String" resultType="int">
+      select count(*) from member where id=#{id}
+   </select>
+   <select id="getAllMembers" resultType="member">
+      select * from member order by id asc
+   </select>
+      <delete id="deleteMember" parameterType="String">
+         delete from member where num=#{num}
+      </delete>
+      <select id="getSearchName" parameterType="String" resultType="String">
+      	select name from member where id=#{id}
+      </select>
+      <select id="login" parameterType="Map" resultType="int">
+      	select count(*) from member where id=#{id} and pass=#{pass}
+      </select>
 </mapper>
 <!-- 인터페이스 만들고 매퍼 다만들고 컨트롤러에서 메퍼에 있는거 호출 -->

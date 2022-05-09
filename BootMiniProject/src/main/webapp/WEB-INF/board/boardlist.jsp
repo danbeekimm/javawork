@@ -14,6 +14,9 @@
 body {
  font-size: 2rem;
  font-family: 'Jua';
+ background-image: url("../image/wallpaperbetter.jpg");
+ background-repeat: no-repeat;
+ background-size: cover;
  }
 </style>
 </head>

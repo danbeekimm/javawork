@@ -19,12 +19,7 @@ public class TestMenuController {
 		
 	}
 	
-	@GetMapping("/board/list")
-	public String home3()
-	{
-		return "/board/boardlist"; 
-		
-	}
+	
 	
 	
 	@GetMapping("/load/map")

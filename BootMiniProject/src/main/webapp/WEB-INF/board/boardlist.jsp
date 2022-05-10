@@ -14,13 +14,44 @@
 body {
  font-size: 2rem;
  font-family: 'Jua';
- background-image: url("../image/wallpaperbetter.jpg");
+ background-image: url("../image/제목_없는_아트워크_1.png");
  background-repeat: no-repeat;
  background-size: cover;
  }
+ div.reboard{
+ 	font-family: 'Jua';
+ 	
 </style>
 </head>
 <body>
-	<h1>게시판</h1>
+<div class="reboard">
+	<h3>총${totalCount} 개의 글이 있습니다</h3>
+	<table class="table table-bordered" style="width: 750px;">
+		<caption><b>답변형게시판</b></caption>
+		<tr style="background-color: #ddd">
+			<th style="width: 50px">번호</th> 
+			<th style="width: 400px">제목</th> 
+			<th style="width: 70px">작성자</th> 
+			<th style="width: 100px">작성일</th> 
+			<th style="width: 50px">조회</th> 
+			<th style="width: 50px">추천</th> 
+			</tr>
+		<c:if test="${totalCount==0}"> 
+			<tr>
+				<td colspan="6" align="center">
+					<b>등록된 글이 없습니다</b>
+				</td>
+			</tr>
+		</c:if>
+		</table>
+		<!-- 글쓰기버튼은로그인해야보인다 -->
+		<c:if test="${sessionScope.loginok!=null}">
+			<button type="button" class="btn btn-success" style="width: 100px;"
+				onclick="location.href='form'"> <!-- 버튼누르면 form이동 -->
+				<span class="	glyphicon glyphicon-pencil"></span>&nbsp;글쓰기
+			</button>
+		</c:if>
+
+	</div>
 </body>
 </html>

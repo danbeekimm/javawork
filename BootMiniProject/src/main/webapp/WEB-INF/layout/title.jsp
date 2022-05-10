@@ -20,7 +20,7 @@ body {
  background-color: #F3F1E9;
  }
  img{
- width: 200px;
+ width: 100px;
  height: 60px;
  }
  .b{
@@ -39,7 +39,7 @@ div.
 <c:set var="root" value="<%=request.getContextPath()%>"/>
 <body>
    <a href="/">
-   <img src="${root}/image/ddo.png" >
+   <img src="${root}/image/love.png" >
    <b style="float: right;">SpringBoot+Tiles+Mybatis Project</b>
    </a>
    <div class="login">

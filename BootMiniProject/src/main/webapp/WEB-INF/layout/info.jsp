@@ -12,19 +12,36 @@
 <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Jua&family=Lobster&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
 <style>
 body {
- font-size: 2rem;
+ font-size: 1rem;
  font-family: 'Jua';
- 
+ color: black;
+ text-align: center;
+
+
  }
+img{
+padding-top: 4px;
+
+width: 180px;
+height: 150px;
+border: 1px solid navy;
+text-align: center;
+
+}
 </style>
 </head>
 
-<body style="color: white;">
-<span class="glyphicon glyphicon-user" style="color: white;"></span>&nbsp;nike
+<body style="color: black;">
+<div style="border: 5px solid black; border-radius: 20%; background-color: #fffafa;">
+<img src="../image/22.jpg" style="border-radius: 30%;" >
 <br>
-<span class="glyphicon glyphicon-home" style="color: white;"></span>&nbsp;adress : 강남 서초
+<span class="glyphicon glyphicon-user" style="color: black;"></span>&nbsp;name:김단비
 <br>
-<span class="glyphicon glyphicon-earphone" style="color: white;"></span>&nbsp;telephone:010-4444-3333
+<span class="glyphicon glyphicon-home" style="color: black;"></span>&nbsp;adress : 강남 서초
 <br>
+<span class="glyphicon glyphicon-earphone" style="color: black;"></span>&nbsp;telephone:010-7777-3333
+<br>
+<br><br>
+</div>
 </body>
 </html>

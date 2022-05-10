@@ -20,7 +20,7 @@ body{
 
 background-size:cover;
 background-repeat: no-repeat;
- background-image: url("../image/wallpaperbetter.jpg");
+ background-image: url("../image/제목_없는_아트워크_1.png");
  background-repeat: no-repeat;
  background-size: cover;
 }

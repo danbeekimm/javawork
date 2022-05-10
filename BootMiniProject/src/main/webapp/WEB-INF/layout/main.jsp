@@ -14,7 +14,7 @@
 body {
  font-size: 2rem;
  font-family: 'Jua';
- background-image: url("../image/wallpaperbetter.jpg");
+ background-image: url("../image/제목_없는_아트워크_1.png");
  background-repeat: no-repeat;
  background-size: cover;
 
@@ -22,15 +22,16 @@ body {
  img.mainimage{
  	width: 120px;
  	height: 120px;
- 	border: 3px solid black; 
+ 	border: 20px solid white; 
  	margin-right: 10px;
  	margin-bottom: 10px;
+ 	border-top: 30px;
  	}
 
 </style>
 </head>
 <body>
-<h2  class="a" style='background-color: #8b4513;' "color: white; font-family: 'Lobster'" >[NIKE NEW Trending Now]</h2>
+<h2  class="a" style='background-color: #bc8f8f;' "color: white; font-family: 'Lobster'" >[김단비 님의 블로그]</h2>
 <c:forEach var="a" begin="1" end="20">
 		<img src="image/${a}.jpg" class="mainimage">
 		<c:if test="${a%5==0}"><br></c:if>

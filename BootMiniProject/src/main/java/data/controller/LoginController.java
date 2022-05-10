@@ -20,10 +20,11 @@ import data.mapper.MemberMapperInter;
 public class LoginController {
 	@Autowired
 	MemberMapperInter mapper;
+	
 	@GetMapping("/form")
 	public String form()
 	{
-		return "/login/loginform";
+		return "/sub2/login/loginform";
 	}
 	@PostMapping("/process")
 	public String loginProcess(@RequestParam String id,

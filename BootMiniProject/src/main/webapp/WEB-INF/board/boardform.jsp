@@ -15,7 +15,7 @@
    rel="stylesheet">
 <style type="text/css">
 body{
-  background-image: url("../image/제목_없는_아트워크_1.png");
+   background-image: url("../image/존메이어.jpg");
  background-repeat: no-repeat;
  background-size: cover;
  }
@@ -27,8 +27,9 @@ body{
 </style>
 
 </head>
-<body>
-<c:if test="${sessionScope.loginok==null}">
+<body style="background-color: #dcaca9">
+<br>
+<c:if test="${sessionScope.loginok==null}"> <!-- ==두개써야됨! -->
    <script type="text/javascript">
       alert("다시 로그인 후 글쓰기를 시도해 주세요");
       location.href='../login/form'

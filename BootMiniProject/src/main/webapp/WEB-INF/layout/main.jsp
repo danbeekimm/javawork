@@ -14,27 +14,39 @@
 body {
  font-size: 2rem;
  font-family: 'Jua';
- background-image: url("../image/제목_없는_아트워크_1.png");
+  background-image: url("../image/존메이어.jpg");
  background-repeat: no-repeat;
  background-size: cover;
 
  }
  img.mainimage{
+ 	
  	width: 120px;
  	height: 120px;
- 	border: 20px solid white; 
- 	margin-right: 10px;
+ 	border: 20px solid #7c9368; 
+ 	margin-left: 30px;
  	margin-bottom: 10px;
  	border-top: 30px;
+ 	justify-content: center;
+ 	left: 0px;
+ 	
  	}
-
+.grid-wrapper{
+	display: flex;
+	
+	
+}
 </style>
 </head>
 <body>
-<h2  class="a" style='background-color: #bc8f8f;' "color: white; font-family: 'Lobster'" >[김단비 님의 블로그]</h2>
+<br><br>
+<div style="background-color: #7c9368;">
+<div><h2  class="a" style= 'background-color: #dcd1cb;' "color: white; font-family: 'Lobster'" >[김단비 님의 블로그]</h2>
 <c:forEach var="a" begin="1" end="20">
 		<img src="image/${a}.jpg" class="mainimage">
 		<c:if test="${a%5==0}"><br></c:if>
 </c:forEach>
+</div>
+</div>
 </body>
 </html>

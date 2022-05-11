@@ -16,12 +16,13 @@
 body {
  font-size: 2rem;
  font-family: 'Jua';
-  background-image: url("../image/제목_없는_아트워크_1.png");
+  background-image: url("../image/존메이어.jpg");
  background-repeat: no-repeat;
  background-size: cover;
  }
  div.layout div{
  		border: 0px solid black;
+ 		left: 20px;
  		}
  a:link {
 	text-decoration: none;
@@ -66,7 +67,8 @@ div.layout div.main{
 </style>
 </head>
 <body><!-- 타일스의이름과일치해야함 -->
-	<div class="layout"> 
+
+	<div class="layout" style="text-align: center;"> 
 	
 		<div class="title">
 			<tiles:insertAttribute name="title"/>

@@ -14,7 +14,7 @@
 body {
  font-size: 2rem;
  font-family: 'Jua';
- background-image: url("../image/제목_없는_아트워크_1.png");
+  background-image: url("../image/존메이어.jpg");
  background-repeat: no-repeat;
  background-size: cover;
  }
@@ -67,13 +67,14 @@ body {
 </script>
 </head>
 <body>
+<br>
 <button type="button" class="btn btn-info"
    style="width: 150px;" onclick="location.href='form'">회원가입</button>
    <hr>
    <h2>총 ${totalCount} 명의 회원이 있습니다</h2>
 </body>
 <hr>
-<table class="table table-bordered" style="width: 700px; color:black;">
+<table class="table table-bordered" style="width: 700px; color:black; background-color: #dcaca9">
    <caption><b>전체 회원 명단</b></caption>
    <tr style="background-color: #a9a9a9;">
       <th style="width: 70px">번호</th>

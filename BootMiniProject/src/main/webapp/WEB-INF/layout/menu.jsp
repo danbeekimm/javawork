@@ -24,6 +24,7 @@ body {
 
 ul.menu {
    list-style: none;
+   
 }
 
 ul.menu li {
@@ -31,8 +32,9 @@ ul.menu li {
    float: left;
    border: 1px solid black;
    height: 60px;
+
    line-height: 60px;
-   margin-right: 10px;
+   margin-right: 20px;
    text-align: center;
    font-size: 22px;
    font-family: 'Jua';
@@ -63,7 +65,7 @@ ul.menu li a {
 </head>
 
 <body>
-<br><br>
+<br><br><br><br>
    <ul class="menu">
       <li><span class="glyphicon glyphicon-home"></span> <a
          href="${root}/"><b>Home</b></a></li>

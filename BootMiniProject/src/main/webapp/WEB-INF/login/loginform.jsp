@@ -14,7 +14,7 @@
 body {
  font-size: 2rem;
  font-family: 'Jua';
- background-image: url("../image/제목_없는_아트워크_1.png");
+   background-image: url("../image/존메이어.jpg");
  background-repeat: no-repeat;
  background-size: cover;
  }

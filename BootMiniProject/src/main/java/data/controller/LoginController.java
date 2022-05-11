@@ -38,7 +38,7 @@ public class LoginController {
 		int n=mapper.login(map);
 		if(n==1) {
 			//세션유지시간을지정(기본 30분)
-			session.setMaxInactiveInterval(60*60*6);
+			session.setMaxInactiveInterval(60*60*6);//서버안끄면 유지시간 6시간
 			//아이디와 비번이맞는경우
 			session.setAttribute("loginid", id);
 			//로그인한사람의 이름

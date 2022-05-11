@@ -5,7 +5,7 @@
       select ifnull(max(num),0) from reboard
    </select>
    <update id="updateReStep" parameterType="Map">
-      update reboard restep=restep+1 where reg=#{reg} and restep > #{restep} 
+      update reboard set restep=restep+1 where reg=#{reg} and restep > #{restep} 
       <!-- 같은 그룹이면서 전달받은 restep보다 큰 경우 모조리 +1 -->
 
 	</update>
@@ -25,7 +25,7 @@
 		<!-- values뒤에 한칸띄어쓰기 -->
 	
 	  <update id="updateReadCount" parameterType="int">
-	      update reboard set readcount = recount+1 where num=#{num}
+	      update reboard set readcount = readcount+1 where num=#{num}
 	   </update>
 	   <select id="getData" parameterType="int" resultType="board">
 	      select * from reboard where num=#{num}

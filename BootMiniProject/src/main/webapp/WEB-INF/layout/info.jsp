@@ -33,7 +33,7 @@ text-align: center;
 
 <body style="color: black;">
 <div style="border: 5px solid black; border-radius: 20%; background-color: #fffafa;">
-<img src="../image/22.jpg" style="border-radius: 30%;" >
+<img src="../image/bee.png" style="border-radius: 30%;" >
 <br>
 <span class="glyphicon glyphicon-user" style="color: black;"></span>&nbsp;name:김단비
 <br>

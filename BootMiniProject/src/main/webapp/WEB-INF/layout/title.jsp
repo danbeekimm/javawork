@@ -17,31 +17,39 @@ body {
  font-family: 'Jua';
  
  height: 100px;
- background-color: #F3F1E9;
+ background-color: #dcaca9;
  }
  img{
  width: 100px;
  height: 60px;
+ position: relative;
+ right: 200px;
+ left: 3px;
  }
  .b{
-	text-align: center;
-	}
+ text-align: center;
+ position: absolute;
+ bottom: 30px;
+ }
+
+
 div.login{
 	position: absolute;
 	left: 600px;
 	top: 30px;
 	width: 200px;
+	
 	}
-div.
+
 </style>
 
 </head>
 <c:set var="root" value="<%=request.getContextPath()%>"/>
 <body>
    <a href="/">
-   <img src="${root}/image/love.png" >
-   <b style="float: right;">SpringBoot+Tiles+Mybatis Project</b>
-   </a>
+   <b>
+   <b style="float: right; background-color: #dcaca9; width: 800px; height: 160px;  text-align: center;"><img src="${root}/image/love.png" >SpringBoot+Tiles+Mybatis Project</b>
+   </b></a>
    <div class="login">
       <c:if test="${sessionScope.loginok==null}">
          <button type="button" class="btn btn-success" style="width: 100px;" 

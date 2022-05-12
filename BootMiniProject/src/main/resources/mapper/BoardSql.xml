@@ -30,6 +30,29 @@
 	   <select id="getData" parameterType="int" resultType="board">
 	      select * from reboard where num=#{num}
 	   </select>
+	   <update id="updateChu" parameterType="Map"><!-- map에 chu받을건데 chu가 0이면 --> 
+	   	update reboard set chu=#{chu},
+	   	<if test="chu==0">
+	   		totalchu=totalchu-1<!-- 이거들어가고 -->
+	   	</if>
+	   	<if test="chu==1">
+	   		totalchu=totalchu+5
+	   	</if>
+	   	where num=#{num} <!-- 여기에완성 -->
+	   
+	   </update>
+	   
+	   <update id="updateBoard" parameterType="board">
+	   	 update reboard set subject=#{subject},content=#{content}
+	   	 <if test="photos!=null"> <!-- null일때 이게들어감 -->
+	   	 	,photos=#{photos}
+	   	 </if>
+	   	 where num=#{num}
+	   </update>
+	   
+	   <delete id="deleteBoard" parameterType="int">
+	   		delete from reboard where num=#{num}
+	   </delete>
 	</mapper>
 
 <!-- 인터페이스 만들고 매퍼 다만들고 컨트롤러에서 메퍼에 있는거 호출 -->

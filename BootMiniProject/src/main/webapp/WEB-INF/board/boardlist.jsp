@@ -16,7 +16,7 @@ body {
  font-family: 'Jua';
  background-image: url("../image/존메이어.jpg");
  background-repeat: no-repeat;
- background-size: cover;
+ background-size: 100%;
 
  }
  div.reboard{
@@ -53,22 +53,23 @@ body {
 						<c:set var="no" value="${no-1}" />
 						<!-- 제목 -->
 						<td>
-						<!-- 답글인경우만 해당 -->
-							<c:if test="${dto.relevel>0 }">
-							<!-- level 1당 빈칸3개 -->
-							<c:forEach begin="1" end="${dto.relevel}">
+							<!-- 답글인경우만 해당 --> <c:if test="${dto.relevel>0 }">
+								<!-- level 1당 빈칸3개 -->
+								<c:forEach begin="1" end="${dto.relevel}">
 								&nbsp;&nbsp;
 							</c:forEach>
-							<img src="../image/re.png" style="width: 20px;height: 20px;">
+								<img src="../image/re.png" style="width: 20px; height: 20px;">
+							</c:if> <!-- 제목출력 content는 목록갓다가 다시올때 그대로 13페이지에있어야함--> <a
+							href="content?num=${dto.num}&currentPage=${currentPage}">
+								${dto.subject} </a> &nbsp; <c:if test="${dto.photos!='no' }">
+								<span class="glyphicon glyphicon-picture"
+									style="color: gray; font-size: 0.8em;"></span>
+							</c:if> <!-- 댓글개수출력 --> <c:if test="${dto.acount>0}">
+								<a
+									href="content?num=${dto.num}&currentPage=${currentPage}#alist"
+									style="color: red;">[${dto.num}] </a>
 							</c:if>
-							<!-- 제목출력 content는 목록갓다가 다시올때 그대로 13페이지에있어야함-->
-							<a href="content?num=${dto.num}&currentPage=${currentPage}">
-								${dto.subject} 
-							</a>
-							&nbsp;
-							<c:if test="${dto.photos!='no' }">
-								<span class= "glyphicon glyphicon-picture" style="color: gray;font-size: 0.8em;"></span>
-							</c:if>
+
 						</td>
 
 						<td>${dto.name}</td>

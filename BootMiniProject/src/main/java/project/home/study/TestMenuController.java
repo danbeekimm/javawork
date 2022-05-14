@@ -12,12 +12,7 @@ public class TestMenuController {
 		return "/layout/main"; //tiles에서 /*/*로지정해서 똑같이함
 		
 	}
-	@GetMapping("/shop/form")
-	public String home2()
-	{
-		return "/shop/shopform"; 
-		
-	}
+
 	
 	
 	

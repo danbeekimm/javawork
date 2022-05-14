@@ -70,6 +70,7 @@ ul.menu li a {
       <li><span class="glyphicon glyphicon-home"></span> <a
          href="${root}/"><b>Home</b></a></li>
       <li><a href="${root}/shop/form"><b>상품등록</b></a></li>
+      <li><a href="${root}/shop/list"><b>상품목록</b></a></li>
       <li><a href="${root}/board/list"><b>게시판</b></a></li>
       <li><a href="${root}/member/list"><b>회원가입</b></a></li>
       <li><a href="${root}/load/map"><b>오시는길</b></a></li>

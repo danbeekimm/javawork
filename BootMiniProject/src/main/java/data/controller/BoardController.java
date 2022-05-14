@@ -22,6 +22,7 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import data.dto.BoardDto;
+import data.mapper.AnswerMapperInter;
 import data.mapper.MemberMapperInter;
 import data.service.BoardService;
 import util.FileUtil;
@@ -31,8 +32,12 @@ import util.FileUtil;
 @RequestMapping("/board")
 public class BoardController {
 
+	
 	@Autowired
 	private BoardService service;
+	
+	@Autowired
+	private AnswerMapperInter answerMapper;
 	
 	@Autowired
 	private MemberMapperInter memberMapper;
@@ -43,7 +48,7 @@ public class BoardController {
 	{
 		ModelAndView mview=new ModelAndView();
 		int totalCount;//총갯수
-		int perPage=3;//한 페이지당 보여질 글의 갯수
+		int perPage=5;//한 페이지당 보여질 글의 갯수
 		int perBlock=5;//한(밑에 페이지 숫자)블럭당 보여질 페이지수
 		int totalPage; //총페이지수
 		int startNum;//한페이지에서 보여질 시작 글번호
@@ -83,7 +88,12 @@ public class BoardController {
 			String id=dto.getId();
 			String name=memberMapper.getSearchName(id);
 			dto.setName(name);
+			
+			//e댓글갯수acount 에 넣기
+			int acount=answerMapper.getAnswerList(dto.getNum()).size();
+			dto.setAcount(acount);
 		}
+		
 		//출력시필요한 변수들
 		mview.addObject("totalCount", totalCount);
 		mview.addObject("totalPage", totalPage);

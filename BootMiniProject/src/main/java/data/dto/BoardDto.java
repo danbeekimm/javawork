@@ -22,6 +22,8 @@ public class BoardDto {
 	private int reg;
 	private int restep;
 	private int relevel;
+	private int acount;
+	
 	
 }
 // db>dto>인터페이스>controller>service>mapper>sql 순서

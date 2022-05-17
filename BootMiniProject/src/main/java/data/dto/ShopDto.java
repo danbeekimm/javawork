@@ -14,5 +14,5 @@ public class ShopDto {
 	private String subject;
 	private String content;
 	private String ipgoday;
-
+	private String photo; //사진저장란
 }

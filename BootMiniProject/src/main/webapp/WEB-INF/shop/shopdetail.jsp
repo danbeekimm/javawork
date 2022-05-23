@@ -53,7 +53,6 @@ body {
 	</div>
 <script type="text/javascript">
 
-		
 		$("#btn").click(function(){
 		     var ok = confirm("삭제를 원하시면 [확인]을 눌러주세요");
 		     var del = "delete?num=${dto.num}&currentPage=${currentPage}"

@@ -15,6 +15,6 @@ public interface BoardServiceInter {
    public BoardDto getData(int num);
    public void updateChu(int chu,int num); //map으로묶어서 
    //mapper로 보내기sql>boardmapperlnter>serviceinter>boardservice
-   public void updateBoard(BoardDto dto);
+   public void updateBo
    public void deleteBoard(int num); //mapper꺼받아옴?
 }

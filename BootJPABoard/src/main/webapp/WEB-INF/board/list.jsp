@@ -47,11 +47,11 @@ body {
 							<a href="detail?num=${dto.num}" style="color: black;">
 								${dto.subject}
 							</a>
-							<c:if test="${dto.photo!='no'}">
+							
 							&nbsp;
 							<span class="glyphicon glyphicon-picture"
 							style="color: gray; font-size: 0.8em;"></span>
-							</c:if>
+							
 						</td>
 						<td>${dto.writer}</td>
 						<td>

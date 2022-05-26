@@ -87,7 +87,7 @@ body {
 				style="width: 100px;">삭제</button>
 				<button type="button" class="btn btn-info"
 				style="width: 100px;"
-				onclick="location.href='list'">목록</button>
+				onclick="/updateform?userid=${userid}">목록</button>
 			</td>
 			
 		</tr>

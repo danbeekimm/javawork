@@ -68,7 +68,7 @@ public class ShopController {
 	   //업로드한 사진명
 	   dto.setPhoto(photoName);
 	   shopService.insertShop(dto);
-	   photoName="";
+	   photoName=null; //초기값지정
    }
    
    @GetMapping("/list")
@@ -97,5 +97,13 @@ public class ShopController {
 		   file.delete();
 	   //db delete
 	   shopService.deleteShop(num);
+   }
+   @PostMapping("/update")
+   public void update(@RequestBody ShopDto dto)
+   {
+	   //사진이 있을경우 이미지명 넣기
+	   dto.setPhoto(photoName);
+	   shopService.updateShop(dto);
+	   photoName=null; //수정후 값초기화해야됨.
    }
 }

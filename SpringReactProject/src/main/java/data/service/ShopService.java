@@ -34,4 +34,8 @@ public class ShopService {
 	   shopMapper.deleteShop(num);
    }
    
+   public void updateShop (ShopDto dto)
+   {
+	   shopMapper.updateShop(dto);
+   }
 }

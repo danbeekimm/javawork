@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="data.mapper.MemoMapper">
+   <insert id="insertMemo" parameterType="memo">
+         INSERT INTO memo (nickname,message,writeday) 
+         VALUES (#{nickname},#{message}, now())
+   </insert>
+   <select id="memoList"  resultType="memo">
+   		SELECT * FROM memo ORDER BY num DESC 
+   </select>
+   <delete id="deleteMemo" parameterType="int">
+   		DELETE FROM memo WHERE num=#{num}
+   </delete>
+  
+</mapper>

@@ -15,5 +15,12 @@
    <delete id="deleteShop" parameterType="int">
    		delete from shop where num=#{num}
    </delete>
+   <update id="updateShop" parameterType="shop">
+   		update shop set sangpum=#{sangpum},su=#{su},dan=#{dan}
+   		<if test="photo!=null">
+   			,photo=#{photo}
+   		</if>
+   		where num=#{num}
+   </update>
 </mapper>
 <!-- 인터페이스 만들고 매퍼 다만들고 컨트롤러에서 메퍼에 있는거 호출 -->

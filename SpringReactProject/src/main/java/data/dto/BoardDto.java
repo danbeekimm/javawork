@@ -18,8 +18,8 @@ public class BoardDto {
 	private String name;
 	private String subject;
 	private String content;
-	@JsonFormat(pattern = "yyyy-MM-dd HH:mm")
+	@JsonFormat(pattern = "yyyy-MM-dd HH:mm", timezone = "Asia/Seoul")
 	private Timestamp writeday;
-	private String day;
+	
 
 }

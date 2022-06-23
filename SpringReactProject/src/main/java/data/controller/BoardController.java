@@ -21,6 +21,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import data.dto.BoardDto;
 import data.service.BoardService;
+import data.service.MemberService;
 import util.FileUtil;
 
 @RestController
@@ -30,6 +31,9 @@ public class BoardController {
 
 	@Autowired
 	private BoardService boardService;
+	
+	@Autowired
+	private MemberService memberService;
 	
 	String photoName; //리액트에서 업로드한 이미지명(변경된 이미지명일수도)전역변수
 
@@ -65,16 +69,23 @@ public class BoardController {
 	   }
 	   
 	
-	@GetMapping("/insert")
+	@PostMapping("/insert")
 	public void insert(@RequestBody BoardDto dto)
 	{
-		boardService.insertBoard(dto);
+		System.out.println(dto);
+		//id 에 해당하는 ㅇ름가져오기
+		String name=memberService.getName(dto.getId());
+		dto.setName(name);
+		
+		boardService.insertBoard(dto); 
+		//member 서비스에서 얻어서 셋어쩌구로한다? 얻어오려면
+		photoName=null; //사진안지워지게하는거 널안하면 이전에 인서트했던게지워짐
 	}
 	
 	@GetMapping("/detail")
 	public BoardDto detail(@RequestParam int num)
 	{
-		//조회수증가된 다음에
+		//조회수증가된 다음에 
 		boardService.updateReadCount(num);
 		//dto 반환
 		return boardService.getData(num);
@@ -88,11 +99,11 @@ public class BoardController {
 	
 	@GetMapping("/pagelist")
 	public Map<String, Object> getPagingList(
-			@RequestParam(defaultValue = "1")int currentPage) //아무것도안주면 1로
+			@RequestParam int currentPage) //아무것도안주면 1로
 	{
 		System.out.println("currentPage"+currentPage);
 		int totalCount;//총갯수
-		int perPage=2;//한 페이지당 보여질 글의 갯수
+		int perPage=5;//한 페이지당 보여질 글의 갯수
 		int perBlock=5;//한(밑에 페이지 숫자)블럭당 보여질 페이지수
 		int totalPage; //총페이지수
 		int startNum;//한페이지에서 보여질 시작 글번호
